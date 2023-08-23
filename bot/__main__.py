@@ -434,7 +434,7 @@ def main():
 
     start_handler = CommandHandler(BotCommands.StartCommand, start)
     log_handler = CommandHandler(BotCommands.LogCommand, log,
-                               filters=CustomFilters.owner_filter | CustomFilters.sudo_user)
+                               filters=CustomFilters.owner_filter | CustomFilters.owner)
     restart_handler = CommandHandler(BotCommands.RestartCommand, restart,
                                filters=CustomFilters.owner_filter | CustomFilters.sudo_user)
     ping_handler = CommandHandler(BotCommands.PingCommand, ping,
