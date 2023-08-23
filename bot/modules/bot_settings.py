@@ -1350,7 +1350,7 @@ def bot_settings(update, context):
 
 
 bot_settings_handler = CommandHandler(BotCommands.BotSetCommand, bot_settings,
-                                      filters=CustomFilters.owner_filter | CustomFilters.owner)
+                                      filters=CustomFilters.owner_filter | CustomFilters.owner_user)
 bb_set_handler = CallbackQueryHandler(edit_bot_settings, pattern="botset")
 
 dispatcher.add_handler(bot_settings_handler)
